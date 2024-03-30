@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const sayHitesh = function () {
+      console.log("Hitesh");
+    };
+    const changeText = function () {
+      document.querySelector("h1").innerHTML = "best JS series";
+    };
+
+    const changeMe = setTimeout(changeText, 2000); //setTimeout kya hai ki y ek time maagta hai ki itna time aap mujhe do itne time ke baad me aapka kaam kr duga per krunga ek baar hi (agar aapko baar baar kaam ko krvana hai to aap setinterval ka use kro vo aapke kaam ko jo aapne time diya hai usme hi krega per jitna time diya hai utna rukega (breakpoint le rha hai) or fir se us kaam ko krega)
+    //aap isko function me bhi use ker skte ho
+    document.querySelector("#stop").addEventListener("click", function () {
+      clearTimeout(changeMe); //yha per hum setimeout ko rokne ke liy bhi ek function bna ke use rok skte hai or vo method hai (clearTimeout()) y
+      console.log("STOPPED");
+    });
+  </script>
+</html>

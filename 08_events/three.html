@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const sayDate = function (str) {
+      console.log(str, Date.now());
+    };
+
+    let intervalId;
+    const startchanging = function () {
+      if (!intervalId) {
+        intervalId = setInterval(changedate, 1000, "hi");
+      }
+
+      function changedate() {
+        document = sayDate();
+      }
+    };
+
+    const stopchanging = function () {
+      clearInterval(intervalId);
+      intervalId = null;
+    };
+    document.querySelector("#start").addEventListener("click", startchanging);
+    document.querySelector("#stop").addEventListener("click", stopchanging);
+    // const intervalId = setInterval(sayDate, 1000, "hi"); //isme ek traha se looping ho rhi hai
+
+    // clearInterval(intervalId); //isse rukta hai
+  </script>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const sayDate = function (str) {
+      console.log(str, Date.now());
+    };
+
+    let intervalId;
+    const startChangingdate = function () {
+      if (!intervalId) {
+        intervalId = setInterval(changedate, 1000, "hi");
+      }
+
+      function changedate() {
+        document = sayDate();
+      }
+    };
+
+    const stopChangingdate = function () {
+      clearInterval(intervalId);
+      intervalId = null;
+    };
+
+    document.querySelector("#start").addEventListener("click", startChangingdate);
+    document.querySelector("#stop").addEventListener("click", stopChangingdate);
+  </script>
+</html> -->

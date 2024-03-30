@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React</title>
+  </head>
+  <body style="background-color: black; color: aliceblue">
+    <button>Button Clicked</button>
+  </body>
+  <script>
+    class React {
+      constructor() {
+        this.library = "React";
+        this.server = "https://localhost:300";
+
+        //requirement
+        document
+          .querySelector("button")
+          .addEventListener("click", this.handleClick.bind(this));
+      }
+      handleClick() {
+        console.log("button clicked");
+        console.log(this.server);
+      }
+    }
+
+    const app = new React();
+  </script>
+</html>
+
+<!-- what  is bind in js -->
+
+<!-- In JavaScript, the bind() method is a powerful tool that allows you to create a new function with a customized this context. Let’s dive into the details:
+
+Function Borrowing:
+With bind(), an object can borrow a method from another object. For instance, consider two objects: person and member.
+The member object borrows the fullName method from the person object: -->
+
+<!-- const person = {
+    firstName: "John",
+    lastName: "Doe",
+    fullName: function () {
+      return this.firstName + " " + this.lastName;
+    }
+  };
+  
+  const member = {
+    firstName: "Hege",
+    lastName: "Nilsen"
+  };
+  
+  let fullName = person.fullName.bind(member);
+  console.log(fullName()); // Outputs: "Hege Nilsen" -->
+
+<!-- The this keyword refers to an object, and its meaning depends on how it’s invoked -->
+<!-- Remember, this is not a variable; it’s a keyword. You cannot directly change its value. The bind() method ensures that functions maintain their intended context, making it a valuable tool in JavaScript programming -->

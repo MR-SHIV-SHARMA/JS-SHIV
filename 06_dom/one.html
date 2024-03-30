@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>DOM learning</title>
+    <style>
+      .bg-black {
+        background-color: #212121;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body class="bg-black">
+    <div>
+      <h1 id="title" class="heading">
+        DOM learning on Chai aur code
+        <span style="display: none">test text</span>
+      </h1>
+      <h2>Lorem ipsum dolor sit.</h2>
+      <h2>Lorem ipsum dolor sit.</h2>
+      <h2>Lorem ipsum dolor sit.</h2>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <input type="password" name="" id="" />
+
+      <ul>
+        <li class="list-item">one</li>
+        <li class="list-item">two</li>
+        <li class="list-item">three</li>
+        <li class="list-item">four</li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    //   document.getElementById('title')
+    //     < h1 id = "title" class=​"test" > " DOM learning on Chai aur code " < span style = "display:​ none" > test text​</span >​</h1 >
+    //       document.getElementById('title').id
+    //   'title'
+    //   document.getElementById('title').className
+    //   'heading'
+    //   document.getElementById('title').getAttribute('id')
+    //   'title'
+    //   document.getElementById('title').getAttribute('class')
+    //   'heading'
+    //   document.getElementById('title').setAttribute('class', 'test heading') //y hmesha overwrite krta hai ab class me heading ki jgaha test ho gya hai
+    //   undefined
+
+    //   document.getElementById('title')
+    //     < h1 id = "title" class=​"test" style = "background-color:​ green;​" > " DOM learning on Chai aur code " < span
+    //   style = "display:​ none" > test text​</span >​</h1 >
+
+    //           const title = document.getElementById('title')
+    //   undefined
+
+    //   title
+    //     < h1 id = "title" class=​"test" > " DOM learning on Chai aur code " < span style = "display:​ none" > test text​</span >​</h1 >
+
+    //       title.style.backgroundColor = 'green'
+    //   'green'
+
+    //   title.style.padding = '15px'
+    //   '15px'
+
+    //   title.style.borderRadius = '15px'
+    //   '15px'
+
+    //   title
+    //     < h1 id = "title" class=​"heading" > "DOM learning on Chai aur code"<!-- <span style="display: none">test text</span> --​
+
+    //       title.textContent
+    //   'DOM learning on Chai aur code'
+
+    //   title.innerHTML
+    //   'DOM learning on Chai aur code\x3C!-- <span style="display: none">test text</span> -->'
+
+    //   title.innerText
+    //   'DOM learning on Chai aur code'
+
+    //   title.innerText                 //innerText me hme vo text dikhai diya jo visibel hai
+    //   'DOM learning on Chai aur code'
+
+    //   title.textContent
+    //   'DOM learning on Chai aur code test text '    //innerContent me hme vo text dikhai diya jo visibel nhi hai
+
+    //   title.innerHTML
+    //   'DOM learning on Chai aur code <span style="display: none">test text</span> '  //isme hme pura html milta hai jo hide hota hai
+
+    //   document.getElementsByClassName('heading')    //is traha hum class ko access kar skte hai
+    //   HTMLCollection[h1#title.heading, title: h1#title.heading]0: h1#title.headingtitle: h1#title.headinglength: 1[[Prototype]]: HTMLCollection
+
+    //   document.querySelector('h2')   //hum kisi eliment ya teg ko ueke name se access kar skte hai
+    //     < h2 > Lorem ipsum dolor sit.​</h2 >
+
+    //       document.querySelector('#title')    // yha id se access kiya gya hai
+    //       < h1 id = "title" class=​"heading" > "DOM learning on Chai aur code " < span style = "display:​ none" > test text​</span >​</h1 >
+
+    //         document.querySelector('.heading')     // yha class se access kiya gya hai
+    //         < h1 id = "title" class=​"heading" > "DOM learning on Chai aur code " < span style = "display:​ none" > test text​</span >​</h1 >
+
+    //           document.querySelector('input[type="password"]')     //is trha hum kuchh bhi add kr skte hai or delet bhi kar skte hai
+    //           < input type = "password" name id >
+
+    //   document.querySelector('ul')
+    //     < ul >​…​</ul >
+
+    // const myul = document.querySelector('ul')
+    //   undefined
+
+    //   myul
+    //     < ul >​…​</ul >
+
+    //       myul.querySelector('li')
+    //       < li class=​"list-item" >​…​</li >
+
+    // const turnGreen = myul.querySelector('li')
+    //   undefined
+
+    //   turnGreen.style.backgroundColor = 'green'
+    //   'green'
+
+    //   turnGreen.style.padding = '10px'
+    //   '10px'
+
+    //   turnGreen.innerText
+    //   'one'
+
+    //   turnGreen.innerText = 'five'
+    //   'five'
+
+    //   querySelector        // y hme ek hi valu ya tag slecte krke deta hai
+
+    //   querySelectorAll     // y hme sari valu hi slect krke deta hai
+
+    // document.querySelectorAll('li')
+    // NodeList(4)[li.list - item, li.list - item, li.list - item, li.list - item]
+    // 0: li.list - item1: li.list - item2: li.list - item3: li.list - item
+    // length: 4                     // NodeList per hum ForEach loop lga skte hai
+    // [[Prototype]]: NodeList       //isme hme nodelist mila hai to hum is per loop to lga skte hai per use btana bdhega ki konse item per lgana hai  //jbki array me esa nhi hota hai usme vo sbhi per loop lga deta hai hme btane ki jrurt nhi hoti hai
+
+    // document.querySelectorAll('li')
+    // NodeList(4)[li.list - item, li.list - item, li.list - item, li.list - item]
+
+    // const tempLiList = document.querySelectorAll('li')
+    // undefined
+
+    // tempLiList
+    // NodeList(4)[li.list - item, li.list - item, li.list - item, li.list - item]
+
+    // tempLiList.style.color = 'green'
+    // VM371: 1 Uncaught TypeError: Cannot set properties of undefined(setting 'color')
+    // at < anonymous >: 1: 24
+    //   (anonymous) @VM371: 1
+
+    // tempLiList[0].style.color = 'green'       // [0] is traha hme btana pdhta hai konse element pr loop lgana hai
+    // 'green'
+
+    // document.querySelectorAll('h1')
+    // NodeList [h1#title.heading]
+
+    // const myH1 = document.querySelectorAll('h1')
+    // undefined
+
+    // myH1
+    // NodeList [h1#title.heading]
+
+    // myH1[0].style.color = 'green'      //yha bhi h1 ka color nodelist se hi change kiya gya hai
+    // 'green'
+
+    // const tempLiList = document.querySelectorAll('li')
+    // undefined
+
+    // tempLiList
+    // NodeList(4)[li.list - item, li.list - item, li.list - item, li.list - item]
+
+    // tempLiList.forEach(function (l) {          //NodeList per hum ForEach loop lga skte hai
+    //   l.style.backgroundColor = 'green'
+    // })
+    // undefined
+
+    // document.getElementsByClassName('list-item')
+    // HTMLCollection(4)[li.list - item, li.list - item, li.list - item, li.list - item]
+    // 0: li.list - item1: li.list - item2: li.list - item3: li.list - itemlength: 4
+    // [[Prototype]]: HTMLCollection       //HTMLCollection per hum dairect looping nhi ker skte hai is liy hme HTMLCollection ko Array me convert krna hota hai .from ke thru
+
+    // const tempClassList = document.getElementsByClassName('list-item')
+    // undefined
+
+    // tempClassList
+    // HTMLCollection(4)[li.list - item, li.list - item, li.list - item, li.list - item]
+
+    // Array.from(tempClassList)
+    //   (4)[li.list - item, li.list - item, li.list - item, li.list - item]
+
+    // const myConvertedArray = Array.from(tempClassList)
+    // undefined
+
+    // myConvertedArray                    // y hmare pass Array aa gya hai
+    //   (4)[li.list - item, li.list - item, li.list - item, li.list - item]
+
+    // myConvertedArray.forEach(function (li) {
+    //   li.style.color = 'orange'
+    // })
+    // undefined
+  </script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chai aur code</title>
+  </head>
+
+  <body style="background-color: #212121; color: #fff"></body>
+  <script>
+    const div = document.createElement("div"); //element create krne ke liy document.createElement('') ka use krte hai
+    console.log(div);
+    div.className = "main"; //yha class add kiya gya hai
+    div.id = Math.round(Math.random() * 10 + 1); //yha id add ki gyi hai math.rendom ke thru
+    div.setAttribute("title", "generated title"); //yha Attribute ya element set kiya hai
+    div.style.backgroundColor = "green";
+    div.style.padding = "12px";
+    // div.innerText = "Chai aur code"
+    const addText = document.createTextNode("Chai aur code"); //yha per ek text create kiya gya hai
+    div.appendChild(addText);
+
+    document.body.appendChild(div); //hmne jo node ya element create kiya hai use hum appendechild se body ke kisi bhi element me add ker skte hai
+  </script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chai aur code | DOM</title>
+  </head>
+
+  <body style="background-color: #212121; color: #fff">
+    <ul class="language">
+      <li>Javascript</li>
+    </ul>
+  </body>
+  <script>
+    function addLanguage(langName) {
+      //multipal language Add krne ke liy ek function bnaya gya hai lekin y optimaiz nhi hai to ise use nhi krna chaiy
+      const li = document.createElement("li");
+      li.innerHTML = `${langName}`;
+      document.querySelector(".language").appendChild(li);
+    }
+    addLanguage("python");
+    addLanguage("typescript");
+
+    function addOptiLanguage(langName) {
+      //multipal language Add krne ke liy ek function bnaya gya hai y method optimaiz hai to hme ise hi use krna chaiy
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langName)); //appendChild ka use krna chaiy
+      document.querySelector(".language").appendChild(li);
+    }
+    addOptiLanguage("golang");
+
+    //Edit
+    const secondLang = document.querySelector("li:nth-child(2)"); //besicli yha per language ko replesh kiya ja rha hai
+    console.log(secondLang);
+    //secondLang.innerHTML = "Mojo"
+    const newli = document.createElement("li"); //yha nya element create kiya gya hai
+    newli.textContent = "Mojo";
+    secondLang.replaceWith(newli);
+
+    //edit
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = "<li>TypeScript</li>";
+
+    //remove
+    const lastLang = document.querySelector("li:last-child"); //element ko remove krna hai
+    lastLang.remove();
+  </script>
+</html>

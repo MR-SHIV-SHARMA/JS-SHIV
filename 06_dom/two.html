@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM | Chai aur code</title>
+  </head>
+
+  <body style="background-color: #212121; color: #fff">
+    <div class="parent">
+      <!-- this is a comment -->
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+    </div>
+  </body>
+  <script>
+    const parent = document.querySelector(".parent");
+    // console.log(parent);
+    // console.log(parent.children);
+    // console.log(parent.children[1].innerHTML);
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    //      console.log(parent.children[i].innerHTML);
+
+    // }
+    parent.children[1].style.color = "orange";
+    // console.log(parent.firstElementChild);  //isme aap phle element ko slecte ker skte ho
+    // console.log(parent.lastElementChild);   ////isme aap last element ko slecte ker skte ho
+
+    const dayOne = document.querySelector(".day");
+    // console.log(dayOne);
+    // console.log(dayOne.parentElement);    //child se perent per jane ke liy
+    // console.log(dayOne.nextElementSibling);  //element ke bhai ke paas jane ke liy ise use kro
+
+    console.log("NODES: ", parent.childNodes); //isse hme pta chlta hai ki browser bhaind the seen kitna complex tree strucher bna rha hai
+    // NODES:  NodeList(11)0: text1: comment2: text3: div.day4: text5: div.day6: text7: div.day8: text9: div.day10: textlength: 11[[Prototype]]: NodeList yha dekh skte ho aap
+  </script>
+</html>
