@@ -5,12 +5,12 @@
 
 // question =>  ek symbol lijiy or use decler karke print kar dijiy as a symbol in object
 
-const mySym = Symbol("key1");   // symbol liya
+const mySym = Symbol("key1"); // symbol liya
 
 const JsUser = {
   name: "Hitesh",
   "full name": "Hitesh Choudhary",
-  [mySym]: "mykey1",            // sqwar brects me dala  as a key valu
+  [mySym]: "mykey1", // sqwar brects me dala  as a key valu
   age: 18,
   location: "Jaipur",
   email: "hitesh@google.com",
@@ -24,11 +24,12 @@ const JsUser = {
 // console.log(JsUser[mySym])    // printf kar diya
 
 JsUser.email = "hitesh@chatgpt.com";
-// Object.freeze(JsUser)                                   // objects ko freeze karne par error kuchh nhi aata hai bus uske baad jo changes kiye jata hai vo kam nhi karte hai use phle ke hi karte hai 
+// Object.freeze(JsUser)                                   // objects ko freeze karne par error kuchh nhi aata hai bus uske baad jo changes kiye jata hai vo kam nhi karte hai use phle ke hi karte hai
 JsUser.email = "hitesh@microsoft.com";
 // console.log(JsUser);
 
-JsUser.greeting = function () {                            // greeting ek function name hai is traha aap ek function bana ke or chije isme add kar skta hai
+JsUser.greeting = function () {
+  // greeting ek function name hai is traha aap ek function bana ke or chije isme add kar skta hai
   console.log("Hello JS user");
 };
 JsUser.greetingTwo = function () {
