@@ -6,7 +6,7 @@ const dc_heros = ["superman", "flash", "batman"];
 // console.log(marvel_heros);
 // console.log(marvel_heros[3][1]);
 
-const allHeros = marvel_heros.concat(dc_heros)          //y hmare sbhi arrays ko jode kar array me convert kar deta hai  //return new Array
+const allHeros = marvel_heros.concat(dc_heros); //y hmare sbhi arrays ko jode kar array me convert kar deta hai  //return new Array
 // console.log(allHeros);
 
 const all_new_heros = [...marvel_heros, ...dc_heros]; //y hmare sbhi arrays ko tod kr ek array me convert kar deta hai  // same work but spred opertor (tod ker sbhi ek kr dena)
@@ -15,7 +15,7 @@ const all_new_heros = [...marvel_heros, ...dc_heros]; //y hmare sbhi arrays ko t
 
 const another_array = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]];
 
-const real_another_array = another_array.flat(Infinity); //y hmare sbhi arrays ko tod kr ek array me convert kar deta hai  // flat ko hum defth bhi de skte hai 
+const real_another_array = another_array.flat(Infinity); //y hmare sbhi arrays ko tod kr ek array me convert kar deta hai  // flat ko hum defth bhi de skte hai
 // console.log(real_another_array);
 
 // console.log(Array.isArray("Hitesh")); //Array.isArray se app check kar skte hai ki y ek array hai ya nhi hai
@@ -27,7 +27,6 @@ let score2 = 200;
 let score3 = 300;
 
 // console.log(Array.of(score1, score2, score3)); // y jo Array.of hai y hmare data ko array me converty kar deta hai
-
 
 // How to destruct an array in JavaScript?
 

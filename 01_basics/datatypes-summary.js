@@ -1,18 +1,21 @@
+// kis traha se data ko memory me rkha jata hai or access kiya jata hai us basse per data ka 2 chetegoraigeson hai // premitive or // non premitive
+
 //  Primitive
 
-//  7 types : String, Number, Boolearn, null, undefined, Symbol, BigInt
+//  7 types : String, Number, Boolearn, null = emptye, undefined = value is not defind, Symbol = unique, BigInt
 
-const score = 100;
-const scoreValue = 100.3;
+const score = 100; // number
+const scoreValue = 100.3; // number
+// console.log(typeof scoreValue);
 
-const isLoggedIn = false;
-const outsideTemp = null;
-let userEmail;
+const isLoggedIn = false; // boolean
+const outsideTemp = null; // empty
+let userEmail; // undefind
 
-const id = Symbol("123");
-const anotherId = Symbol("123");
+const id = Symbol("123"); // unique identifier for this instance of the database
+const anotherId = Symbol("123"); // unique identifier for this instance of the database   // typeof is symbol
 
-// console.log(id === anotherId);
+// console.log(id === anotherId); // false
 
 // const bigNumber = 3456543576654356754n
 
@@ -20,15 +23,15 @@ const anotherId = Symbol("123");
 
 // Array, Objects, Functions
 
-const heros = ["shaktiman", "naagraj", "doga"];
+const heros = ["shaktiman", "naagraj", "doga"]; // this is Arrays
 let myObj = {
   name: "hitesh",
   age: 22,
-};
+}; // this is Objects
 
 const myFunction = function () {
   console.log("Hello world");
-};
+}; // this is Functions
 
 // console.log(typeof anotherId);
 
@@ -90,7 +93,7 @@ const myFunction = function () {
 // The below function runs inside and inside and the stack will be overflowed.
 
 // Copy
-// Ex: 
+// Ex:
 // function inception() {
 //     inception();
 // }
@@ -114,22 +117,22 @@ const myFunction = function () {
 //     array.push(i);
 // }
 
-let myYoutubename = "hiteshchoudharydotcom"
+let myYoutubename = "hiteshchoudharydotcom";
 
-let anothername = myYoutubename
-anothername = "chaiaurcode"
+let anothername = myYoutubename;
+anothername = "chaiaurcode";
 
 // console.log(myYoutubename);
 // console.log(anothername);
 
 let userOne = {
   email: "user@example.com",
-  upi: "user@example"
-}
+  upi: "user@example",
+};
 
-let userTwo = userOne
+let userTwo = userOne;
 
-userTwo.email = "hitesh@example.com"
+userTwo.email = "hitesh@example.com";
 
 // console.log(userOne.email);
 // console.log(userTwo.email);
