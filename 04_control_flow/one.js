@@ -43,10 +43,10 @@ const debitCard = true
 const loggedInFromGoogle = false
 const loggedInFromEmail = true
 
-if (userLoggedIn && debitCard && 2 == 3) {
+if (userLoggedIn && debitCard && 2 == 3) {  // && me dono statement true honi chaiy nhi to vo kam nhi hoga
     console.log("Allow to buy course");
 }
 
-if (loggedInFromGoogle || loggedInFromEmail) {
+if (loggedInFromGoogle || loggedInFromEmail) {  // or statement me ek bhi statement true hone per jam ho jata hai
     console.log("User logged in");
 }

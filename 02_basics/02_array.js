@@ -37,6 +37,7 @@ let score3 = 300;
 // console.log(a); // 1
 // console.log(b); // 2
 // console.log(c); // 3
+
 // In the above example, we have an array arr with three elements. We then use destructuring assignment to unpack the values of the array into three separate variables a, b, and c. The variables a, b, and c are assigned the values 1, 2, and 3, respectively.
 
 // You can also use destructuring assignment to unpack only some of the values of an array. Here’s an example:

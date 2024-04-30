@@ -1,3 +1,5 @@
+// inportent for interview purposes
+
 // const tinderUser = new Object()       //y ek singleton object hai
 const tinderUser = {}; //y ek nonsingleton object hai
 
@@ -57,40 +59,41 @@ const course = {
   coursename: "js in hindi",
   price: "999", // object ko destrukcher kene ka trika
   courseInstructor: "hitesh",
-}[
-  // course.courseInstructor
+};
 
-  // const {courseInstructor: instructor} = course      //is traha aap object ko destrucher kar skte hai   // kisi chij ko baar baar console krne ke bjay aap usko destructor kar skte hai jisse ki code smart ban jat hai
-  // : lga ke aap key name bhi change kar skte hai
-  // console.log(courseInstructor);
-  // console.log(instructor);
+// course.courseInstructor
 
-  // How to destruct an objects in JavaScript?
-  // To destructure an object in JavaScript, you can use the destructuring assignment syntax. The syntax makes it possible to unpack values from objects into distinct variables 123. Here’s an example:
-  // const obj = { a: 1, b: 2, c: 3 };
-  // const { a, b, c } = obj;
-  // console.log(a); // 1
-  // console.log(b); // 2
-  // console.log(c); // 3
+// const {courseInstructor: instructor} = course      //is traha aap object ko destrucher kar skte hai   // kisi chij ko baar baar console krne ke bjay aap usko destructor kar skte hai jisse ki code smart ban jat hai
+// const { courseInstructor } = course;
+// : lga ke aap key name bhi change kar skte hai
+// console.log(courseInstructor);
+// console.log(instructor)
 
-  // In the above example, we have an object obj with three properties. We then use destructuring assignment to unpack the values of the object into three separate variables a, b, and c. The variables a, b, and c are assigned the values 1, 2, and 3, respectively.
+// How to destruct an objects in JavaScript?
+// To destructure an object in JavaScript, you can use the destructuring assignment syntax. The syntax makes it possible to unpack values from objects into distinct variables 123. Here’s an example:
+// const obj = { a: 1, b: 2, c: 3 };
+// const { a, b, c } = obj;
+// console.log(a); // 1
+// console.log(b); // 2
+// console.log(c); // 3
 
-  // You can also use destructuring assignment to unpack only some of the properties of an object. Here’s an example:
+// In the above example, we have an object obj with three properties. We then use destructuring assignment to unpack the values of the object into three separate variables a, b, and c. The variables a, b, and c are assigned the values 1, 2, and 3, respectively.
 
-  // const obj = { a: 1, b: 2, c: 3 };
-  // const { a, c } = obj;
-  // console.log(a); // 1
-  // console.log(c); // 3
+// You can also use destructuring assignment to unpack only some of the properties of an object. Here’s an example:
 
-  // In the above example, we have an object obj with three properties. We then use destructuring assignment to unpack only the first and third properties of the object into two separate variables a and c. The variable b is skipped.
+// const obj = { a: 1, b: 2, c: 3 };
+// const { a, c } = obj;
+// console.log(a); // 1
+// console.log(c); // 3
 
-  // {
-  //     "name": "hitesh",
-  //     "coursename": "js in hindi",    // y json formet hai
-  //     "price": "free"
-  // }
+// In the above example, we have an object obj with three properties. We then use destructuring assignment to unpack only the first and third properties of the object into two separate variables a and c. The variable b is skipped.
 
-  ({},
+// {
+//     "name": "hitesh",
+//     "coursename": "js in hindi",    // y json formet hai
+//     "price": "free"
+// }
+
+({}),
   {}, // y json formet hai
-  {})
-];
+  {};
