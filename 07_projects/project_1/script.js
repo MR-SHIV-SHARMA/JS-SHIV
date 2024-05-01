@@ -30,6 +30,15 @@ buttons.forEach(function (button) {
 
 
 
+
+
+
+
+
+
+
+
+
 // const buttons = document.querySelectorAll(".button");
 // const body = document.querySelector("body");
 
