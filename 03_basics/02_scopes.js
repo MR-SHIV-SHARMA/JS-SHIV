@@ -28,7 +28,7 @@ if (true) {
   const username = "hitesh";
   if (username === "hitesh") {
     const website = " youtube";
-    // console.log(username + website);      that is a nested scope
+    // console.log(username + website);     // that is a nested scope
   }
   // console.log(website);
 }

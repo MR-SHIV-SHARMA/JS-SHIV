@@ -17,12 +17,12 @@ function addTwoNumbers(number1, number2) {  //that is a peramitor
 // addTwoNumbers(3, 5); // that is aarguments
 
 function addTwoNumbers(number1, number2) {
-  // let result = number1 + number2    // return ko phle aap ek variable me hold kre fir aap baki ka kam kre
+  let result = number1 + number2    // return ko phle aap ek variable me hold kre fir aap baki ka kam kre
   // return result                    //return ka use krke aap result ko aap return kar skte hai
-  return number1 + number2; //aap dairect bhi return kar skte hai    // return ke baad ka console print nhi hota hai
+  // return number1 + number2; //aap dairect bhi return kar skte hai    // return ke baad ka console print nhi hota hai
 }
 
-const result = addTwoNumbers(3, 5);
+// const result = addTwoNumbers(3, 5);
 
 // console.log("Result: ", result);
 

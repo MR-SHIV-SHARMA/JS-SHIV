@@ -1,6 +1,6 @@
 // if
-const isUserloggedIn = true
-const temperature = 41
+const isUserloggedIn = true;
+const temperature = 41;
 
 // if ( temperature === 40 ){
 //     console.log("less than 50");
@@ -20,7 +20,6 @@ const temperature = 41
 
 // console.log(`User power: ${power}`);
 
-
 // const balance = 1000
 
 // if (balance > 500) console.log("test"),console.log("test2");
@@ -38,15 +37,15 @@ const temperature = 41
 
 // }
 
-const userLoggedIn = true
-const debitCard = true
-const loggedInFromGoogle = false
-const loggedInFromEmail = true
+const userLoggedIn = true;
+const debitCard = true;
+const loggedInFromGoogle = false;
+const loggedInFromEmail = true;
 
-if (userLoggedIn && debitCard && 2 == 3) {  // && me dono statement true honi chaiy nhi to vo kam nhi hoga
-    console.log("Allow to buy course");
-}
+// if (userLoggedIn && debitCard && 2 == 2) {  // && me dono statement true honi chaiy nhi to vo kam nhi hoga
+//     console.log("Allow to buy course");
+// }
 
-if (loggedInFromGoogle || loggedInFromEmail) {  // or statement me ek bhi statement true hone per jam ho jata hai
-    console.log("User logged in");
-}
+// if (loggedInFromGoogle || loggedInFromEmail) {  // or statement me ek bhi statement true hone per jam ho jata hai
+//     console.log("User logged in");
+// }
