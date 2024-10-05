@@ -46,6 +46,6 @@ const loggedInFromEmail = true;
 //     console.log("Allow to buy course");
 // }
 
-// if (loggedInFromGoogle || loggedInFromEmail) {  // or statement me ek bhi statement true hone per jam ho jata hai
+// if (loggedInFromGoogle || loggedInFromEmail) {  // or statement me ek bhi statement true hone per kam ho jata hai
 //     console.log("User logged in");
 // }

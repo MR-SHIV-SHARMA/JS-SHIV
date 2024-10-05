@@ -112,9 +112,6 @@ fetch("https://api.github.com/users/hiteshchoudhary")
   })
   .catch((error) => console.log(error));
 
-// promise.all
-// yes this is also available, kuch reading aap b kro.
-
 // fetch() global function
 // Note: This feature is available in Web Workers
 
@@ -129,3 +126,75 @@ fetch("https://api.github.com/users/hiteshchoudhary")
 // response = fetch('something', { kuchh or bhi bhej skte ho})
 
 // fetch yha se do bhao me jata hai web browser  or  data
+
+// promise.all
+// yes this is also available, kuch reading aap b kro.
+
+// Promise.all is a powerful method in JavaScript that is used to handle multiple promises concurrently. It takes an array (or iterable) of promises as an input and returns a single promise that resolves when all of the input promises have resolved. If any of the input promises reject, the returned promise immediately rejects with the reason of the first promise that rejected.
+
+// Example of Promise.all:
+// Imagine we have three asynchronous operations (like fetching data from different APIs), and we want to run them in parallel and do something when all of them are done.
+
+// Example Code:
+
+// // Simulate asynchronous operations with promises
+// const promise1 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//       console.log('Promise 1 resolved');
+//       resolve(10); // returns a value after 1 second
+//   }, 1000);
+// });
+
+// const promise2 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//       console.log('Promise 2 resolved');
+//       resolve(20); // returns a value after 2 seconds
+//   }, 2000);
+// });
+
+// const promise3 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//       console.log('Promise 3 resolved');
+//       resolve(30); // returns a value after 1.5 seconds
+//   }, 1500);
+// });
+
+// // Using Promise.all to handle all promises
+// Promise.all([promise1, promise2, promise3])
+//   .then((results) => {
+//       console.log('All promises resolved');
+//       console.log(results); // Output: [10, 20, 30]
+//   })
+//   .catch((error) => {
+//       console.error('One of the promises failed', error);
+//   });
+
+  
+// Explanation:
+// Promises Setup: We have three promises (promise1, promise2, promise3) that resolve after 1 second, 2 seconds, and 1.5 seconds, respectively.
+// Promise.all Usage: We pass these promises as an array to Promise.all().
+// Resolving: The then block runs only when all promises resolve. It receives an array of resolved values [10, 20, 30] in the order of the promises passed to Promise.all().
+// Rejecting: If any promise rejects, the catch block is executed with the error from the first promise that rejected.
+
+// Scenario with a Rejection:
+// If any promise rejects, the entire Promise.all will reject immediately:
+
+// const promise1 = Promise.resolve('Resolved 1');
+// const promise2 = Promise.reject('Error in Promise 2');
+// const promise3 = Promise.resolve('Resolved 3');
+
+// Promise.all([promise1, promise2, promise3])
+//     .then((results) => {
+//         console.log('All promises resolved', results);
+//     })
+//     .catch((error) => {
+//         console.error('One of the promises failed:', error); // Output: "One of the promises failed: Error in Promise 2"
+//     });
+
+// Here, even though promise1 and promise3 resolve successfully, the rejection of promise2 causes Promise.all to reject immediately with the error from promise2.
+
+// Use Cases:
+// Batch API Requests: Making multiple API calls at once and waiting for all results before proceeding.
+// Parallel Processing: Running multiple time-consuming tasks simultaneously to save time.
+// Data Aggregation: Collecting data from different sources where each source requires asynchronous fetching.
+// Promise.all is essential for scenarios where multiple asynchronous operations must all complete before the next step can proceed.

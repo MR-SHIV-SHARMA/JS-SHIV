@@ -31,6 +31,7 @@ const newArr = myArr.join();
 
 // slice, splice
 
+// const myArr = [0, 1, 2, 3, 4, 5];
 console.log("A ", myArr);
 
 const myn1 = myArr.slice(1, 3); // slice orignal array me menuplet nhi krta hai uski copy deta hai  y ek stack memory ka exampale hai

@@ -47,6 +47,7 @@ const users = [
 ];
 
 users[1].email;
+// console.log(users[1].email);
 // console.log(tinderUser);
 
 // console.log(Object.keys(tinderUser));         // objects se Array me convert krne ke li is methde ka use kiya jata hai    key me hme only name or id jese elements milte hai
